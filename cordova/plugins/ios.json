@@ -9,7 +9,14 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
+        }
+    }
 }
