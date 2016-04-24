@@ -5,6 +5,8 @@ export default Ember.Controller.extend({
   longitude: 0.000000,
   altitude: 0,
   speed: 0,
+  maxAltitude: 0,
+  maxSpeed: 0,
   flightRunning: false,
   actions: {
     startFlight() {
@@ -16,6 +18,10 @@ export default Ember.Controller.extend({
           altitude: position.coords.altitude,
           speed: position.coords.speed
         });
+        const lastMaxAltitude = self.get('maxAltitude');
+        const lastMaxSpeed = self.get('maxSpeed')
+        self.set('maxAltitude', Math.max(position.coords.altitude, lastMaxAltitude));
+        self.set('maxSpeed', Math.max(position.coords.speed, lastMaxSpeed));
       }
       const options = { enableHighAccuracy: true };
       const watchId = navigator.geolocation.watchPosition(onSuccess, function() {}, options);

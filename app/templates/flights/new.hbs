@@ -26,6 +26,19 @@
 <div class="divider"></div>
 <div class="section">
   <div class="row">
+    <div class="col s6 center">
+      Max Altitude<br />
+      {{maxAltitude}} m
+    </div>
+    <div class="col s6 center">
+      Max Velocity<br />
+      {{maxSpeed}} m/s
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <div class="row">
     <div class="col s12 center">
       {{#if flightRunning}}
         <button type="button" class="btn btn-large" {{action 'stopFlight'}}>Stop Flight</button>
