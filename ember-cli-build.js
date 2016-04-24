@@ -9,11 +9,19 @@ module.exports = function(defaults) {
     }
   });
 
-  const robotoOptions = { destDir: 'font/roboto' };
-  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.eot', robotoOptions);
-  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.ttf', robotoOptions);
-  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.woff', robotoOptions);
-  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.woff2', robotoOptions);
+  // Materialize Javascript
+  app.import('bower_components/Materialize/js/sideNav.js');
+  app.import('bower_components/Materialize/js/hammer.min.js');
+  app.import('bower_components/Materialize/js/jquery.hammer.js');
+  app.import('bower_components/Materialize/js/velocity.min.js');
+
+  // Roboto fonts
+  const mdiOptions = { destDir: 'font/material-design-icons' };
+  app.import('bower_components/Materialize/font/material-design-icons/Material-Design-Icons.eot', mdiOptions);
+  app.import('bower_components/Materialize/font/material-design-icons/Material-Design-Icons.svg', mdiOptions);
+  app.import('bower_components/Materialize/font/material-design-icons/Material-Design-Icons.ttf', mdiOptions);
+  app.import('bower_components/Materialize/font/material-design-icons/Material-Design-Icons.woff', mdiOptions);
+  app.import('bower_components/Materialize/font/material-design-icons/Material-Design-Icons.woff2', mdiOptions);
 
   const firaOptions = { destDir: 'font/fira-mono'};
   app.import('vendor/fonts/firamono-regular-webfont.eot', firaOptions);

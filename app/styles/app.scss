@@ -1,4 +1,10 @@
+@import "components/color";
+
+$primary-color: color("orange", "base");
+$secondary-color: color("blue", "base");
+
 @import "materialize";
+
 @import "fira-mono";
 
 html{
