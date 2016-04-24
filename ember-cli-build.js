@@ -9,6 +9,19 @@ module.exports = function(defaults) {
     }
   });
 
+  const robotoOptions = { destDir: 'font/roboto' };
+  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.eot', robotoOptions);
+  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.ttf', robotoOptions);
+  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.woff', robotoOptions);
+  app.import('bower_components/Materialize/font/roboto/Roboto-Regular.woff2', robotoOptions);
+
+  const firaOptions = { destDir: 'font/fira-mono'};
+  app.import('vendor/fonts/firamono-regular-webfont.eot', firaOptions);
+  app.import('vendor/fonts/firamono-regular-webfont.ttf', firaOptions);
+  app.import('vendor/fonts/firamono-regular-webfont.svg', firaOptions);
+  app.import('vendor/fonts/firamono-regular-webfont.woff', firaOptions);
+  app.import('vendor/fonts/firamono-regular-webfont.woff2', firaOptions);
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
