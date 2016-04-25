@@ -31,6 +31,14 @@ module.exports = [
         "clobbers": [
             "navigator.geolocation"
         ]
+    },
+    {
+        "file": "plugins/com.cordova.plugins.sms/www/sms.js",
+        "id": "com.cordova.plugins.sms.Sms",
+        "pluginId": "com.cordova.plugins.sms",
+        "clobbers": [
+            "window.sms"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -38,7 +46,8 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-compat": "1.0.0",
-    "cordova-plugin-geolocation": "2.2.0"
+    "cordova-plugin-geolocation": "2.2.0",
+    "com.cordova.plugins.sms": "0.1.10"
 }
 // BOTTOM OF METADATA
 });

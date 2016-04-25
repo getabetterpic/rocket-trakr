@@ -18,6 +18,9 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    <feature name="Sms">
+        <param name="ios-package" value="Sms" />
+    </feature>
     <name>RocketTrakr</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -37,7 +40,6 @@
     <allow-intent href="itms-apps:*" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
-    <preference name="DisallowOverscroll" value="true" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
@@ -48,4 +50,5 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <preference name="DisallowOverscroll" value="true" />
 </widget>

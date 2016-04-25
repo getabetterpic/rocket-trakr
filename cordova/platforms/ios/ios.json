@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Sms\"><param name=\"ios-package\" value=\"Sms\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -35,6 +39,9 @@
             "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
         },
         "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
+        },
+        "com.cordova.plugins.sms": {
             "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
         }
     },
@@ -71,11 +78,20 @@
             "clobbers": [
                 "navigator.geolocation"
             ]
+        },
+        {
+            "file": "plugins/com.cordova.plugins.sms/www/sms.js",
+            "id": "com.cordova.plugins.sms.Sms",
+            "pluginId": "com.cordova.plugins.sms",
+            "clobbers": [
+                "window.sms"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-geolocation": "2.2.0"
+        "cordova-plugin-geolocation": "2.2.0",
+        "com.cordova.plugins.sms": "0.1.10"
     }
 }

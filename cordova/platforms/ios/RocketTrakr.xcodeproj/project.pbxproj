@@ -17,6 +17,8 @@
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
 		23EF83C5949C4686AEFACF44 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48E208075E4E519A8016EB /* CDVLocation.m */; };
 		290C242ACB2A4CC9A574AB1C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515EF604E0C74E7FAA0B61A5 /* CoreLocation.framework */; };
+		6201C1A1EA6B4DE1B5889B65 /* Sms.m in Sources */ = {isa = PBXBuildFile; fileRef = A57D50CAD4124F8A9F466AD8 /* Sms.m */; };
+		C59E658BA6AD496B89081E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC27EF044654A6DB1A461EF /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		EC48E208075E4E519A8016EB /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		A8619A82845F4A479A1DF648 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		515EF604E0C74E7FAA0B61A5 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A57D50CAD4124F8A9F466AD8 /* Sms.m */ = {isa = PBXFileReference; name = "Sms.m"; path = "com.cordova.plugins.sms/Sms.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6107BDE0314E432A815DA62C /* Sms.h */ = {isa = PBXFileReference; name = "Sms.h"; path = "com.cordova.plugins.sms/Sms.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2BC27EF044654A6DB1A461EF /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +73,7 @@
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				290C242ACB2A4CC9A574AB1C /* CoreLocation.framework in Frameworks */,
+				C59E658BA6AD496B89081E9E /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				515EF604E0C74E7FAA0B61A5 /* CoreLocation.framework */,
+				2BC27EF044654A6DB1A461EF /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +172,8 @@
 			children = (
 				EC48E208075E4E519A8016EB /* CDVLocation.m */,
 				A8619A82845F4A479A1DF648 /* CDVLocation.h */,
+				A57D50CAD4124F8A9F466AD8 /* Sms.m */,
+				6107BDE0314E432A815DA62C /* Sms.h */,
 			);
 			name = Plugins;
 			path = "RocketTrakr/Plugins";
@@ -280,6 +289,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				23EF83C5949C4686AEFACF44 /* CDVLocation.m in Sources */,
+				6201C1A1EA6B4DE1B5889B65 /* Sms.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,9 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
+        },
+        "com.cordova.plugins.sms": {
+            "PACKAGE_NAME": "com.getabetterpic.rockettrakr"
         }
     },
     "dependent_plugins": {
