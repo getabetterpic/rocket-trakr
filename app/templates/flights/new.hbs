@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col s6 center">
       Latitude<br />
-      {{latitude}}
+      {{format-number latitude format="0.000000"}}
     </div>
     <div class="col s6 center">
       Longitude<br />
-      {{longitude}}
+      {{format-number longitude format="0.000000"}}
     </div>
   </div>
 </div>
@@ -15,11 +15,11 @@
   <div class="row">
     <div class="col s6 center">
       Altitude<br />
-      {{altitude}} m
+      {{format-number altitude format="0,0.0"}} m
     </div>
     <div class="col s6 center">
       Velocity<br />
-      {{speed}} m/s
+      {{format-number speed format="0.00"}} m/s
     </div>
   </div>
 </div>
@@ -28,11 +28,11 @@
   <div class="row">
     <div class="col s6 center">
       Max Altitude<br />
-      {{maxAltitude}} m
+      {{format-number maxAltitude format="0,0.0"}} m
     </div>
     <div class="col s6 center">
       Max Velocity<br />
-      {{maxSpeed}} m/s
+      {{format-number maxSpeed format="0.00"}} m/s
     </div>
   </div>
 </div>

@@ -9,6 +9,9 @@ module.exports = function(defaults) {
     }
   });
 
+  // NumeralJS
+  app.import('bower_components/numeral/numeral.js');
+
   // Materialize Javascript
   app.import('bower_components/Materialize/js/sideNav.js');
   app.import('bower_components/Materialize/js/hammer.min.js');
