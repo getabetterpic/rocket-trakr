@@ -2,7 +2,11 @@
 import Ember from 'ember';
 
 export function formatNumber(params, options) {
-  return numeral(params[0]).format(options.format);
+  if (params === NaN) {
+    return numeral(0).format(options.format);
+  } else {
+    return numeral(params[0]).format(options.format);
+  }
 }
 
 export default Ember.Helper.helper(formatNumber);
