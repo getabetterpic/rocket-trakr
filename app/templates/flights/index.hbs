@@ -1,0 +1,7 @@
+<div class="collection">
+  {{#each model as |flight|}}
+    {{#link-to 'flights.show' flight class="collection-item"}}
+      {{flight.name}}
+    {{/link-to}}
+  {{/each}}
+</div>
