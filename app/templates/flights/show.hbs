@@ -1,1 +1,39 @@
-{{outlet}}
+<div class="row">
+  <div class="col s12 center-align">
+    <h5>{{model.description}}</h5>
+  </div>
+</div>
+<div class="section">
+  <div class="row">
+    <div class="col s6 center">
+      Latitude<br />
+      {{format-number model.lastLatitude format="0.000000"}}
+    </div>
+    <div class="col s6 center">
+      Longitude<br />
+      {{format-number model.lastLongitude format="0.000000"}}
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <div class="row">
+    <div class="col s6 center">
+      Max Altitude<br />
+      {{format-number model.maxAltitude format="0,0.00"}} m
+    </div>
+    <div class="col s6 center">
+      Max Velocity<br />
+      {{format-number model.maxSpeed format="0,0.00"}} m/s
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <div class="row">
+    {{#link-to 'flights.gps-points' model.id class="col s6 center"}}
+      GPS Points<br />
+      {{model.gpsPointsCount}}
+    {{/link-to}}
+  </div>
+</div>
