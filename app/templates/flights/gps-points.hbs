@@ -1,0 +1,10 @@
+<ul class="collection">
+  {{#each model as |point|}}
+    <li class="collection-item">
+      {{format-number point.latitude format="0.000000"}},
+      {{format-number point.longitude format="0.000000"}},
+      {{format-number point.altitude format="0.0"}} m,
+      {{format-number point.speed format="0.00"}} m/s
+    </li>
+  {{/each}}
+</ul>
