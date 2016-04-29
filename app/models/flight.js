@@ -4,8 +4,11 @@ import DS from 'ember-data';
 export default Model.extend({
   lastLatitude: DS.attr('string'),
   lastLongitude: DS.attr('string'),
-  name: DS.attr('string'),
-  maxSpeed: DS.attr('number'),
-  maxAltitude: DS.attr('number'),
-  gpsPoints: DS.hasMany('gps-point', { async: true })
+  description: DS.attr('string'),
+  maxSpeed: DS.attr('string'),
+  maxAltitude: DS.attr('string'),
+  gpsPoints: DS.hasMany('gps-point', { async: true }),
+  gpsPointsCount: Ember.computed('gpsPoints.@each', function() {
+    return this.get('gpsPoints.length');
+  })
 });

@@ -1,5 +1,14 @@
 <div class="section">
   <div class="row">
+    <div class="input-field col s12">
+      {{input value=description id="description" type="text"}}
+      <label for="description">Description</label>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <div class="row">
     <div class="col s6 center">
       Latitude<br />
       {{format-number model.lastLatitude format="0.000000"}}
