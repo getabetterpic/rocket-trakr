@@ -19,6 +19,7 @@ module.exports = function(defaults) {
   app.import('bower_components/Materialize/js/jquery.hammer.js');
   app.import('bower_components/Materialize/js/velocity.min.js');
   app.import('bower_components/Materialize/js/forms.js');
+  app.import('bower_components/Materialize/js/waves.js');
 
   // Roboto fonts
   const mdiOptions = { destDir: 'font/material-design-icons' };
