@@ -13,10 +13,12 @@ module.exports = function(defaults) {
   app.import('bower_components/numeral/numeral.js');
 
   // Materialize Javascript
+  app.import('bower_components/Materialize/js/global.js');
   app.import('bower_components/Materialize/js/sideNav.js');
   app.import('bower_components/Materialize/js/hammer.min.js');
   app.import('bower_components/Materialize/js/jquery.hammer.js');
   app.import('bower_components/Materialize/js/velocity.min.js');
+  app.import('bower_components/Materialize/js/forms.js');
 
   // Roboto fonts
   const mdiOptions = { destDir: 'font/material-design-icons' };
