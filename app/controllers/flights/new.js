@@ -43,7 +43,7 @@ export default Ember.Controller.extend({
         flight.save();
         gpsPoint.save();
       }
-      
+
       const options = { enableHighAccuracy: true };
       const watchId = navigator.geolocation.watchPosition(onSuccess, function() {}, options);
       this.setProperties({
@@ -54,7 +54,7 @@ export default Ember.Controller.extend({
     stopFlight() {
       this.set('flightRunning', false);
       navigator.geolocation.clearWatch(this.get('geoWatch'));
-      this.transitionToRoute('flights.show', this.get('model'));
+      this.transitionToRoute('flights.show', this.get('model.id'));
       // const smsOptions = {
       //   replaceLineBreaks: true, // true to replace \n by a new line, false by default
       //   android: {
