@@ -6,5 +6,6 @@ export default Model.extend({
   longitude: DS.attr('number'),
   altitude: DS.attr('number'),
   speed: DS.attr('number'),
-  flight: DS.belongsTo('flight', { async: true })
+  flight: DS.belongsTo('flight', { async: true }),
+  position: DS.attr('string')
 });

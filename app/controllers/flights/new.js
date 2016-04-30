@@ -19,6 +19,7 @@ export default Ember.Controller.extend({
           longitude: position.coords.longitude,
           speed: position.coords.speed,
           altitude: position.coords.altitude,
+          position: position,
           flight: flight
         });
 
@@ -32,7 +33,6 @@ export default Ember.Controller.extend({
         const maxSpeed = Math.max(position.coords.speed, lastMaxSpeed);
         const maxAltitude = Math.max(position.coords.altitude, lastMaxAltitude);
 
-        console.log(position.coords);
         flight.setProperties({
           lastLatitude: position.coords.latitude,
           lastLongitude: position.coords.longitude,
