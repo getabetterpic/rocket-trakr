@@ -1,5 +1,6 @@
 import Model from 'ember-data/model';
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default Model.extend({
   lastLatitude: DS.attr('string'),

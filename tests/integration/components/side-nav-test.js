@@ -6,19 +6,7 @@ moduleForComponent('side-nav', 'Integration | Component | side nav', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{side-nav}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#side-nav}}
-      template block text
-    {{/side-nav}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.$('li[data-activates="slide-out"]').click();
+  assert.ok(this.$('#side-nav').is(':visible'));
 });

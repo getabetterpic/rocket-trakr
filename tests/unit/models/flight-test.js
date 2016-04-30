@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('flight', 'Unit | Model | flight', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:gps-point']
 });
 
 test('it exists', function(assert) {
