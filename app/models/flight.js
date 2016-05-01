@@ -11,5 +11,8 @@ export default Model.extend({
   gpsPoints: DS.hasMany('gps-point', { async: true }),
   gpsPointsCount: Ember.computed('gpsPoints.@each', function() {
     return this.get('gpsPoints.length');
-  })
+  }),
+  distanceMoved: DS.attr('number'),
+  smsNumber: DS.attr('string'),
+  avgDistance: DS.attr('number')
 });

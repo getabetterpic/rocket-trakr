@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  flightTracker: Ember.inject.service('flight-tracker'),
   latitude: 0.000000,
   longitude: 0.000000,
   altitude: 0,
@@ -8,11 +9,14 @@ export default Ember.Controller.extend({
   maxAltitude: 0,
   maxSpeed: 0,
   flightRunning: false,
+
   actions: {
     startFlight() {
       let self = this;
       let flight = this.get('model');
+      let flightTracker = this.get('flightTracker');
       flight.set('description', this.get('description'));
+
       function onSuccess(position) {
         let gpsPoint = flight.store.createRecord('gps-point', {
           latitude: position.coords.latitude,
@@ -25,7 +29,8 @@ export default Ember.Controller.extend({
 
         self.setProperties({
           altitude: position.coords.altitude,
-          speed: position.coords.speed
+          speed: position.coords.speed,
+          accuracy: position.coords.accuracy
         });
 
         const lastMaxAltitude = self.get('maxAltitude');
@@ -40,7 +45,9 @@ export default Ember.Controller.extend({
           maxSpeed: maxSpeed
         });
 
-        flight.save();
+        flight.save().then(function(flight) {
+          flightTracker.trackFlight(flight);
+        });
         gpsPoint.save();
       }
 
@@ -52,20 +59,16 @@ export default Ember.Controller.extend({
       });
     },
     stopFlight() {
+      this.setProperties({
+        altitude: 0,
+        speed: 0,
+        accuracy: 0,
+        description: '',
+        smsNumber: ''
+      });
       this.set('flightRunning', false);
       navigator.geolocation.clearWatch(this.get('geoWatch'));
       this.transitionToRoute('flights.show', this.get('model.id'));
-      // const smsOptions = {
-      //   replaceLineBreaks: true, // true to replace \n by a new line, false by default
-      //   android: {
-      //     intent: 'INTENT'  // send SMS with the native android SMS messaging
-      //   }
-      // };
-
-      // const message = "Hi, my current location is http://maps.google.com/?q=" + this.get('latitude') + "," + this.get('longitude');
-      // sms.send('770-324-1277', message, smsOptions,
-      //   function() { alert("Successfully sent sms"); }
-      // );
     }
   }
 });

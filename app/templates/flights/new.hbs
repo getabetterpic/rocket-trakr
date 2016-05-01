@@ -5,6 +5,12 @@
       <label for="description">Description</label>
     </div>
   </div>
+  <div class="row">
+    <div class="input-field col s12">
+      {{input value=smsNumber id="smsNumber" type="number"}}
+      <label for="smsNumber">SMS Number</label>
+    </div>
+  </div>
 </div>
 <div class="divider"></div>
 <div class="section">
@@ -42,6 +48,19 @@
     <div class="col s6 center">
       Max Velocity<br />
       {{format-number model.maxSpeed format="0.00"}} m/s
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+  <div class="row">
+    <div class="col s6 center">
+      Distance Travelled<br />
+      {{format-number model.avgDistance format="0,0.0"}} m
+    </div>
+    <div class="col s6 center">
+      Accuracy<br />
+      {{format-number accuracy format="0,0.0"}} m
     </div>
   </div>
 </div>
